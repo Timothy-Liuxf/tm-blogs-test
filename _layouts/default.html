@@ -82,20 +82,7 @@
                 break;
             }
           } else if (paths.length > 1 && paths[paths.length - 2] === 'docs') {
-            switch (paths[lang_index]) {
-              case 'zh-CN':
-                back.innerText = '返回主页';
-                break;
-              case 'zh-TW':
-                back.innerText = '返回主頁';
-                break;
-              case 'fr-FR':
-                back.innerText = 'Retour à la page d\'accueil';
-                break;
-              default:
-                back.innerText = 'Back to Home';
-                break;
-            }
+            back.innerText = 'Home';
           } else {
             back.style.display = 'none';
           }
@@ -107,7 +94,7 @@
               } else {
                 window.location.href = paths.slice(0, lang_index + 2).join('/');
               }
-            } else if (paths.length > 1 && paths[paths.length - 2] !== 'docs') {
+            } else if (paths.length > 1 && paths[paths.length - 2] === 'docs') {
               window.location.href = paths.slice(0, paths.length - 2).join('/');
             }
           };
