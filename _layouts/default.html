@@ -90,12 +90,12 @@
           const getBackUrl = () => {
             if (lang_index !== -1) {
               if (lang_index + 2 === paths.length) {
-                window.location.href = paths.slice(0, lang_index).join('/');
+                window.location.href = paths.slice(0, lang_index).join('/') + '/';
               } else {
-                window.location.href = paths.slice(0, lang_index + 2).join('/');
+                window.location.href = paths.slice(0, lang_index + 1).join('/') + '/';
               }
             } else if (paths.length > 1 && paths[paths.length - 2] === 'docs') {
-              window.location.href = paths.slice(0, paths.length - 2).join('/');
+              window.location.href = paths.slice(0, paths.length - 2).join('/') + '/';
             }
           };
 
