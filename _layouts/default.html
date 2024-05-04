@@ -7,6 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   <style>
+    @media screen and (max-width: 768px) {
+      .head_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
     .option-lang {
       background-color: black;
     }
@@ -35,7 +51,7 @@
             GitHub</a>
         </section>
       </div>
-      <div style="display: flex; align-items: center">
+      <div class="extra-buttons" style="display: flex; align-items: center; margin-right: 10px;">
         <a id="back" class="btn" href="javascript:getBackUrl()"
           style="display: inline-block; margin-right: 5px; white-space: nowrap;">Back</a>
         <select class="btn select-lang" style="display: inline-block;" onchange="redirectToLanguage()">
