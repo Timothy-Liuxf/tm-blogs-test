@@ -11,6 +11,11 @@
       window.location.href = '//www.baidu.com'
     }
   </script>
+  <style>
+    .option-lang {
+      background-color: black;
+    }
+  </style>
   {% include head-custom.html %}
 
   {% seo %}
@@ -34,8 +39,32 @@
           <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
       </div>
-      <div>
-        <button class="btn btn-lang" style="display: inline-block;" onclick="test()">Test</button>
+      <div style="display: flex; align-items: center">
+        <select class="btn select-lang" style="display: inline-block;">
+          <option class="btn option-lang" value="zh-CN">
+            中文（大陆简体）
+          </option>
+          <option class="btn option-lang" value="zh-TW">
+            中文（台灣正體）
+          </option>
+          <option class="btn option-lang" value="en-US">
+            English (United States)
+          </option>
+          <option class="btn option-lang" value="fr-FR">
+            Français (France)
+          </option>
+        </select>
+        <script>
+          const paths = window.location.href.split('/');
+          const pattern = /^(zh-CN|zh-TW|en-US|fr-FR)$/;
+          document.querySelector('.select-lang').value = 'en-US';
+          for (let i = 0; i < paths.length; i++) {
+            if (pattern.test(paths[i])) {
+              document.querySelector('.select-lang').value = paths[i];
+              break;
+            }
+          }
+        </script>
       </div>
     </div>
   </header>
