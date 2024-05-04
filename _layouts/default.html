@@ -90,7 +90,8 @@
           </option>
         </select>
         <script>
-          alert("{{ site.github.base_url }}");
+          const base_url = "{{ site.base-url }}";
+          alert(base_url);
           const paths = window.location.href.split('/');
           const pattern = /^(zh-CN|zh-TW|en-US|fr-FR)$/;
           let lang_index = -1;
