@@ -74,7 +74,7 @@
         </section>
       </div>
       <div class="extra-buttons">
-        <a id="back" class="btn btn-back" href="javascript:getBackUrl()">Back</a>
+        <a id="back" class="btn btn-back" href="javascript:goToBackPage()">Back</a>
         <select id="select-lang" class="btn select-lang" onchange="redirectToLanguage()">
           <option class="btn option-lang" value="zh-CN">
             中文（大陆简体）
@@ -127,7 +127,7 @@
             back.style.display = 'none';
           }
 
-          const getBackUrl = () => {
+          const goToBackPage = () => {
             if (lang_index !== -1) {
               if (lang_index + 2 === paths.length) {
                 window.location.href = paths.slice(0, lang_index).join('/') + '/';
