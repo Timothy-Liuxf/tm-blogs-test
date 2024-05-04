@@ -101,6 +101,9 @@
               break;
             }
           }
+          if (lang_index === -1) {
+            document.querySelector('.select-lang').style.display = 'none';
+          }
 
           const back = document.getElementById('back');
           if (lang_index !== -1) {
