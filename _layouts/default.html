@@ -105,6 +105,7 @@
           </option>
         </select>
         <script>
+          const site_github_url = {{ site.github.url }};
           const current_url = window.location.href;
           const paths = current_url.split('/');
           const pattern = /^(zh-CN|zh-TW|en-US|fr-FR)$/;
