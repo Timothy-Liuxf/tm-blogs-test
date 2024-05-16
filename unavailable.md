@@ -1,3 +1,5 @@
-# 404
+# Unavailable
 
-404
+This resource is unavailable.
+
+[Back to Home.](./)
