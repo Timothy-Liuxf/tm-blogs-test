@@ -1,7 +1,8 @@
 # tm-blogs
+
 Timothy Liu's blogs
 
-## [Get Started](./docs/)
+## [Get Started](./blogs/)
 
 ## License
 

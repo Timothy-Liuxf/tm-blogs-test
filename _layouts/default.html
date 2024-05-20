@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: " en-US" }}">
+<html>
 
 <head>
   <meta charset='utf-8'>
@@ -64,6 +64,49 @@
       background-color: black;
     }
   </style>
+  <script type="text/javascript">
+    const base_url = "{{ site.github.url }}";
+    const repo_url = "{{ site.github.repository_url }}";
+    const repo_branch = "{{ site.github.source.branch }}";
+    const repo_path = "{{ site.github.source.path }}";
+    const current_url = window.location.href;
+    const paths = current_url.split('/');
+    const pattern = /^(zh-CN|zh-TW|en-US|fr-FR)$/;
+    const lang_index = paths.findIndex(path => pattern.test(path));
+    const is_main_page = paths.length === 5 && current_url.endsWith('/');
+
+    document.documentElement.lang = lang_index !== -1 ? paths[lang_index] : 'en-US';
+
+    const returnToBackPage = () => {
+      if (lang_index !== -1) {
+        if (lang_index + 2 === paths.length) {
+          window.location.href = paths.slice(0, lang_index).join('/') + '/';
+        } else {
+          window.location.href = paths.slice(0, lang_index + 1).join('/') + '/';
+        }
+      } else {
+        window.location.href = paths.slice(0, 4).join('/') + '/'
+      }
+    };
+
+    const viewOnGitHub = () => {
+      if (is_main_page) {
+        window.location.href = repo_url + '/';
+      } else {
+        let target = `${repo_url}/blob/${repo_branch}/${repo_path.replace(/\/$/, '')}`;
+        if (!target.endsWith('/')) {
+          target += '/';
+        }
+        target += current_url.slice(base_url.length + 1);
+        if (target.endsWith('/')) {
+          target += 'README.md';
+        } else if (target.endsWith('.html')) {
+          target = target.replace(/\.html$/, '.md');
+        }
+        window.location.href = target;
+      }
+    };
+  </script>
   {% include head-custom.html %}
 
   {% seo %}
@@ -84,7 +127,7 @@
           <a href="{{ site.github.zip_url }}" class="btn">Download as .zip</a>
           <a href="{{ site.github.tar_url }}" class="btn">Download as .tar.gz</a>
           {% endif %}
-          <a href="{{ site.github.repository_url }}" class="btn btn-github"><span class="icon"></span>View on
+          <a href="javascript:viewOnGitHub()" class="btn btn-github"><span class="icon"></span>View on
             GitHub</a>
         </section>
       </div>
@@ -105,23 +148,11 @@
           </option>
         </select>
         <script>
-          const site_github_url = "{{ site.github.url }}";
-          const site_github_branch = "{{ site.github.source.branch }}";
-          const site_github_path = "{{ site.github.source.path }}";
-          const current_url = window.location.href;
-          const paths = current_url.split('/');
-          const pattern = /^(zh-CN|zh-TW|en-US|fr-FR)$/;
-          let lang_index = -1;
           document.getElementById("select-lang").value = 'en-US';
-          for (let i = 0; i < paths.length; ++i) {
-            if (pattern.test(paths[i])) {
-              document.getElementById("select-lang").value = paths[i];
-              lang_index = i;
-              break;
-            }
-          }
           if (lang_index === -1) {
             document.getElementById("select-lang").style.display = 'none';
+          } else {
+            document.getElementById("select-lang").value = paths[lang_index];
           }
 
           const back = document.getElementById('back');
@@ -140,23 +171,11 @@
                 back.innerText = 'Back';
                 break;
             }
-          } else if (paths.length == 5 && current_url.endsWith('/')) {
+          } else if (is_main_page) {
             back.style.display = 'none';
           } else {
             back.innerText = 'Home';
           }
-
-          const returnToBackPage = () => {
-            if (lang_index !== -1) {
-              if (lang_index + 2 === paths.length) {
-                window.location.href = paths.slice(0, lang_index).join('/') + '/';
-              } else {
-                window.location.href = paths.slice(0, lang_index + 1).join('/') + '/';
-              }
-            } else {
-              window.location.href = paths.slice(0, 4).join('/') + '/'
-            }
-          };
 
           const redirectToLanguage = () => {
             if (lang_index !== -1) {
