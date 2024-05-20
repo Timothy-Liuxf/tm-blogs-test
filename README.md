@@ -5,7 +5,9 @@ Timothy Liu's blogs
 
 ## License
 
-[View License](./LICENSE.md)
+Copyright (C) 2023-2024 Timothy Liu
+
+[View license](./LICENSE.md)
 
 ## Support me
 
