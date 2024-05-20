@@ -5,7 +5,7 @@ Timothy Liu's blogs
 
 ## License
 
-[See License.](./LICENSE.md)
+[View License](./LICENSE.md)
 
 ## Support me
 
