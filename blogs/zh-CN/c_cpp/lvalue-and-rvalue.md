@@ -4,6 +4,9 @@
 >
 > [Creative Commons — 署名-相同方式共享 4.0 国际 — CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh-Hans) 许可证
 
+> [!IMPORTANT]
+> 测试一下此 label
+
 ## 前言
 
 本文章是为了补充某大学某专业的程序设计课程而写，因此内容可能较为浅薄，请读者见谅。
