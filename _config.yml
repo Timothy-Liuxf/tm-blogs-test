@@ -1,3 +1,4 @@
 theme: jekyll-theme-hacker
 include:
   - LICENSE.md
+markdown: kramdown
