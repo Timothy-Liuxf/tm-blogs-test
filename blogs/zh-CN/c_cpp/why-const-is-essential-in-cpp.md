@@ -76,3 +76,29 @@ double cabs(const Complex& z)
 ## 单一定义规则（ODR）与 odr-used
 
 **……**
+
+## Test
+
+```mermaid
+flowchart LR
+    Client[前端 / 浏览器] --> Gateway[API 网关]
+
+    Gateway --> User[用户服务]
+    Gateway --> Content[业务内容服务]
+    Gateway --> Concurrency[并发控制服务]
+
+    User --> UserDB[(用户数据库)]
+    Content --> ContentDB[(业务数据库)]
+
+    User --> Email[邮件服务]
+    User --> MQ[消息队列]
+    Content --> MQ
+
+    MQ --> Email
+
+    Concurrency --> Redis[(Redis / 分布式锁)]
+
+    Gateway --> Auth[认证服务]
+    Auth --> Redis
+    User --> Auth
+```
