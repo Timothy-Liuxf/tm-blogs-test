@@ -15,6 +15,20 @@ $$\textstyle f(t) = \frac{1}{2{\rm π}}\int_{-\infty}^{\infty}F(omega){\rm e}^{j
 
 行内公式 $f(t) = \frac{1}{2{\rm π}}\int_{-\infty}^{\infty}F(omega){\rm e}^{j\omega t}{\rm d}\omega$、$\textstyle f(t) = \frac{1}{2{\rm π}}\int_{-\infty}^{\infty}F(omega){\rm e}^{j\omega t}{\rm d}\omega$、$\displaystyle f(t) = \frac{1}{2{\rm π}}\int_{-\infty}^{\infty}F(omega){\rm e}^{j\omega t}{\rm d}\omega$ 测试。
 
+Mermaid:
+
+```mermaid
+flowchart LR
+    Gateway(gateway) --> User(userservice)
+    Gateway --> Content(contentservice)
+
+    User --> Email(emailservice)
+    Content --> Email
+
+    Gateway --> Auth(authservice)
+    User --> Auth
+```
+
 ## 前言
 
 本文章是为了补充某大学某专业的程序设计课程而写，因此内容可能较为浅薄，请读者见谅。
