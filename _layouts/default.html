@@ -96,6 +96,44 @@
     </section>
   </div>
 
+  <!-- Colored block support -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const alertTypes = {
+        NOTE: "note",
+        TIP: "tip",
+        IMPORTANT: "important",
+        WARNING: "warning",
+        CAUTION: "caution"
+      };
+
+      document.querySelectorAll("blockquote").forEach((blockquote) => {
+        const first = blockquote.firstElementChild;
+        if (!first) return;
+
+        const match = first.textContent.trim().match(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]/);
+        if (!match) return;
+
+        const rawType = match[1];
+        const type = alertTypes[rawType];
+
+        blockquote.classList.add("markdown-alert", `markdown-alert-${type}`);
+
+        const title = document.createElement("p");
+        title.className = "markdown-alert-title";
+        title.textContent = rawType[0] + rawType.slice(1).toLowerCase();
+
+        first.textContent = first.textContent.replace(/^\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*/, "");
+
+        if (first.textContent.trim() === "") {
+          first.remove();
+        }
+
+        blockquote.prepend(title);
+      });
+    });
+  </script>
+
   <!-- Mermaid support -->
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
