@@ -78,6 +78,11 @@ code {
   margin-bottom: 0.5rem;
 }
 
+.markdown-alert-icon {
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
 .markdown-alert-note {
   border-left-color: #0969da;
 }
