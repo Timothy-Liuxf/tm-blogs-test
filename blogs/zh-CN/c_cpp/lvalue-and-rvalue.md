@@ -7,6 +7,21 @@
 > [!IMPORTANT]
 > 测试一下此 label
 
+> [!NOTE]
+> 测试一下此 label
+
+> [!WARNING]
+> 测试一下此 label
+
+> [!TIP]
+> 测试一下此 label
+
+> [!CAUTION]
+> 测试一下此 label
+
+> 哈哈哈 [!IMPORTANT]
+> 测试一下此 label
+
 行间公式：
 
 $$f(t) = \frac{1}{2{\rm π}}\int_{-\infty}^{\infty}F(omega){\rm e}^{j\omega t}{\rm d}\omega$$
