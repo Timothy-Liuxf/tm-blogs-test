@@ -21,7 +21,8 @@ function walk(dir) {
 function convertFile(file) {
   let text = fs.readFileSync(file, "utf8");
 
-  text = text.replace(/^\[TOC\]\s*$/gm, "* TOC\n{:toc}");
+  // text = text.replace(/^\[TOC\]\s*$/gm, "* TOC\n{:toc}");
+  text = text.replace(/^\[TOC\]\s*$/gm, "<div class=\"toc\" markdown=\"1\">\n* TOC\n{:toc}\n</div>");
 
   fs.writeFileSync(file, text, "utf8");
 }
