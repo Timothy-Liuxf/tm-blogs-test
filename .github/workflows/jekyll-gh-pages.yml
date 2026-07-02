@@ -35,7 +35,7 @@ jobs:
         with:
           node-version: 24
       - name: Convert TOC syntax
-        run: node scripts/convert-toc.js
+        run: node assets/js/convert-toc.js
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
