@@ -32,6 +32,9 @@ public:
 template <typename T>
 void func() {}
 
+// hhhh
+/* hhh */
+
 int main() {
     string s = "abc";
     int x = 1 + 2;
