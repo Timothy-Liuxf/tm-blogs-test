@@ -55,6 +55,166 @@ code {
   background-color: black;
 }
 
+/*
+ * Use GitHub Dark Theme
+ */
+
+header {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+body {
+  background-color: #0d1117;
+  color: #f0f6fc;
+}
+
+/* href */
+a {
+    color: #4493f8;
+    text-shadow: 0 0 5px rgba(80,155,255,0.5);
+}
+
+blockquote {
+    color: #9198a1;
+    padding: 0 1em;
+    border-left: .25em solid #3d444d;
+}
+
+/* inline code */
+code.highlighter-rouge {
+    font-size: 95%;
+    white-space: break-spaces;
+    background: #656c7633;
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 0px 3px;
+    margin: 0;
+    border-radius: 6px;
+}
+
+/* code block */
+pre {
+    background: #151b23;
+    padding: 10px;
+    font-size: 16px;
+    color: #b5e853;
+    border-radius: 3px;
+    word-wrap: normal;
+    overflow: auto;
+    overflow-y: hidden;
+}
+
+/*
+ * Code highlighting in code block
+ * Use GitHub Dark Theme
+ */
+
+.highlight {
+    color: #f0f6fc
+}
+
+.highlight table td {
+    padding: 5px
+}
+
+.highlight table pre {
+    margin: 0
+}
+
+.highlight .w {
+    color: #f0f6fc
+}
+
+.highlight .err {
+    color: #151515;
+    background-color: #ed1b1d
+}
+
+/* comment */
+.highlight .c,.highlight .cd,.highlight .cm,.highlight .c1,.highlight .cs {
+    color: #9198a1
+}
+
+/* preprocessor */
+.highlight .cp {
+    color: #ffa930
+}
+
+/* operator */
+.highlight .o,.highlight .ow {
+    color: #ff7b72
+}
+
+/* plaintext */
+.highlight .p,.highlight .pi {
+    color: #f0f6fc
+}
+
+/* generic inserted */
+.highlight .gi {
+    color: #60d673
+}
+
+/* generic deleted */
+.highlight .gd {
+    color: #ff5a59
+}
+
+/* generic header */
+.highlight .gh {
+    color: #d2a8ff;
+    font-weight: bold
+}
+
+/* keyword */
+.highlight .k,.highlight .kn,.highlight .kp,.highlight .kr,.highlight .kv {
+    color: #ff7b72
+}
+
+/* keyword type */
+.highlight .kc,.highlight .kt,.highlight .kd {
+    color: #ff7b72
+}
+
+/* string */
+.highlight .s,.highlight .sb,.highlight .sc,.highlight .sd,.highlight .s2,.highlight .sh,.highlight .sx,.highlight .s1 {
+    color: #a5d6ff
+}
+
+/* regex */
+.highlight .sr {
+    color: #99F2e3
+}
+
+/* string escape */
+.highlight .si,.highlight .se {
+    color: #ff7b72
+}
+
+/* namespace / class name / ... */
+.highlight .highlight .nn,.highlight .nc,.highlight .no {
+    color: #d2a8ff
+}
+
+/* label tag */
+.highlight .nt {
+    color: #7ee787
+}
+
+/* label attribute */
+.highlight .na {
+    color: #79c0ff
+}
+
+/* literal */
+.highlight .m,.highlight .mf,.highlight .mh,.highlight .mi,.highlight .il,.highlight .mo,.highlight .mb,.highlight .mx {
+    color: #79c0ff
+}
+
+/* symbol / atom */
+.highlight .ss {
+    color: #a5d6ff
+}
+
 .markdown-alert {
   padding: 0.5rem 1rem;
   margin: 1rem 0;
