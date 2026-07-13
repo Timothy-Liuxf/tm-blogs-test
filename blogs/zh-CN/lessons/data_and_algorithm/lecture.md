@@ -36,7 +36,7 @@ void func() {}
 /* hhh */
 
 int main() {
-    string s = "abc";
+    string s = "abc\n";
     int x = 1 + 2;
     vector<int> v{};
     return 0;
