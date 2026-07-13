@@ -20,6 +20,32 @@ Copyright (C) Timothy Liu 2023
 
 ## 2014
 
+```cpp
+#include <iostream>
+
+using namespace std;
+
+class Foo {
+public:
+};
+
+template <typename T>
+void func() {}
+
+int main() {
+    string s = "abc";
+    int x = 1 + 2;
+    vector<int> v{};
+    return 0;
+}
+```
+
+```js
+import fs;
+
+const s = /abc/;
+```
+
 ### 一、填空题
 
 1. T1 < T3 < T6 < T2 < T4 < T5
