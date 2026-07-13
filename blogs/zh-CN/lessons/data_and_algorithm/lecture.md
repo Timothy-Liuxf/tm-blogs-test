@@ -43,6 +43,16 @@ int main() {
 }
 ```
 
+```diff
+--- a/style.css
++++ b/style.css
+@@ -1,3 +1,3 @@
+ body {
+-    background: #fff;
++    background: #000;
+ }
+```
+
 ```js
 import fs;
 
