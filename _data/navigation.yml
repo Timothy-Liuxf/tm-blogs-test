@@ -3,6 +3,8 @@
 zh-CN:
   label: 中文站内导航
   home_label: 中文首页
+  open_label: 展开导航
+  close_label: 隐藏导航
   home_url: /blogs/zh-CN/
   sections:
     - title: C / C++
@@ -31,6 +33,8 @@ zh-CN:
 zh-TW:
   label: 中文站內導覽
   home_label: 中文首頁
+  open_label: 展開導覽
+  close_label: 隱藏導覽
   home_url: /blogs/zh-TW/
   sections:
     - title: C / C++
@@ -45,6 +49,8 @@ zh-TW:
 en-US:
   label: English site navigation
   home_label: English home
+  open_label: Show navigation
+  close_label: Hide navigation
   home_url: /blogs/en-US/
   sections:
     - title: C / C++
