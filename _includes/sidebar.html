@@ -1,1 +1,23 @@
+<aside class="sidebar">
+  <nav aria-label="{{ include.navigation.label }}">
+    <a class="sidebar-home" href="{{ include.navigation.home_url | relative_url }}">
+      {{ include.navigation.home_label }}
+    </a>
+
+    {% for section in include.navigation.sections %}
+      <section class="sidebar-section">
+        <h2>{{ section.title }}</h2>
+        <ul>
+          {% for item in section.items %}
+            <li>
+              <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="active" aria-current="page"{% endif %}>
+                {{ item.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </section>
+    {% endfor %}
+  </nav>
+</aside>
 
