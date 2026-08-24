@@ -538,7 +538,7 @@ a {
 }
 
 .sidebar-section li {
-  list-style-image: none;
+  list-style: none;
 }
 
 .sidebar a {
