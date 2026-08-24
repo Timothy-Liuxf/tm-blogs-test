@@ -506,8 +506,15 @@ a {
 
 .sidebar-open-button:hover,
 .sidebar-close-button:hover {
-  border-color: #b5e853;
-  color: #b5e853;
+  border-color: #58a6ff;
+  color: #79c0ff;
+}
+
+.sidebar-open-button:active,
+.sidebar-close-button:active {
+  border-color: #58a6ff;
+  background: #1f2937;
+  color: #a5d6ff;
 }
 
 .sidebar-open-button:focus-visible,
@@ -538,8 +545,11 @@ a {
   text-decoration: none;
 }
 
-.sidebar a.active {
-  color: #b5e853;
+.sidebar .active {
+  border-left: 3px solid #8b949e;
+  border-radius: 0 4px 4px 0;
+  background: rgba(110, 118, 129, 0.18);
+  color: #f0f6fc;
   font-weight: bold;
 }
 
